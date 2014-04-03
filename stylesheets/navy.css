@@ -1,4 +1,10 @@
 
+.QuestionText{
+  border-style:solid;
+  border-color:green;
+    font-size: 19pt;
+}
+
 .SurveyRunBackground {
   filter:progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFF8F8F8', endColorstr='#FFC7C7C7');
   background-size:100%;
@@ -952,9 +958,7 @@ input#SurveySubmitButtonElement:hover{
   color:#555555;
 }
 
-.QuestionText{
-  
-}
+
 
 .newSurveyContainerTable{
   

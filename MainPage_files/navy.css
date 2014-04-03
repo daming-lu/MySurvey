@@ -113,6 +113,7 @@
   font-weight:bold
 }
 .SurveyDivider{
+  width: 800px;    
   border-bottom:1px solid #cccccc
 }
 .SurveyHighlight{
@@ -120,6 +121,18 @@
   cursor:pointer;
   cursor:hand
 }
+
+.specified{
+  font-size:10pt;
+  font-family:"Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+  color:#000000;
+  -webkit-text-size-adjust: none; 
+  font-weight:bold;
+    text-align : left;
+    vertical-align : top;
+
+}    
+
 #SurveySubmitButton{
   padding-top:15px;
   padding-bottom:15px;
@@ -951,7 +964,14 @@ input#SurveySubmitButtonElement:hover{
 }
 
 .QuestionText{
-  
+    
+}
+
+.TdLeft{
+    width: 50px;
+    font-size:10pt;
+  font-family:"Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+  color:#000000;
 }
 
 .newSurveyContainerTable{
