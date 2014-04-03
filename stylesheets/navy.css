@@ -24,7 +24,8 @@
 .SurveyContent textarea,.SurveyContent input,.SurveyContent select,.SurveyContent option{
   font-size:10pt;
   font-family:"Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
-  color:#000000
+  color:#000000;
+  vertical-align:left      
 }
 .SurveyContent a,.SurveyContent a:visited,.SurveyContent a:link,.SurveyContent a:hover{
   color:#000000
@@ -648,7 +649,8 @@ a.newSurveyBack:hover{
 .SurveyContent textarea{
   border:solid 1px #bbb;
   box-shadow:0 0 5px #ccc inset;
-  -webkit-box-shadow:0 0 5px #ccc inset
+  -webkit-box-shadow:0 0 5px #ccc inset;
+  vertical-align:left
 }
 .SurveyContent input{
   padding-left:2px;
