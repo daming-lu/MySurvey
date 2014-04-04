@@ -38,7 +38,7 @@ function validateForm()
 	var error_msg = "";
 	var hasError = false;
 
-	// check gender
+	// >>> check gender
 	var e = document.getElementById("idGender");
 	var genderText = e.options[e.selectedIndex].text;
 
@@ -47,9 +47,16 @@ function validateForm()
 		error_msg += "Please choose your gender!\n";
 		//alert(error_msg);
 		hasError = true;
-	}
+	}	
+	// <<< check gender
 	
-	// 
+	// >>> check radio car
+	/*
+	e = document.getElementById("idGender");
+	var genderText = e.options[e.selectedIndex].text;
+	*/
+	// <<< check radio car
+	
 		
 	if (hasError == true) {
 		alert(error_msg);
