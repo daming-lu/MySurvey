@@ -29,6 +29,10 @@
   </script>
   <script src="./MainPage_files/jquery.min.js" type="text/javascript">
 </script>
+    
+      <script src="./MainPage_files/mine.js" type="text/javascript">
+</script>
+    
   <script src="./MainPage_files/jquery-ui.min.js" type="text/javascript">
 </script>
   <script src="file:///javascript/jquery-1.7.1.min.js" type="text/javascript">
@@ -109,8 +113,14 @@
                         </tr>
                       </tbody>
                     </table><!-- START  -->
-
-                    <form method="post" action="PHP/test1.php" name="run">
+                    <!--
+                    <form method="post" action="PHP/test1.php" name="myForm" onsubmit="return validateForm()">
+                    -->
+                      
+                      
+                    <form method="post" action="" name="myForm" onsubmit="return validateForm()">
+                        
+                        
                       <table width="100%" align="center" cellpadding="0" cellspacing="0"
                       class="newSurveyQuestionsTable">
                         <tbody>
@@ -122,7 +132,7 @@
                                     <!-- Question Start -->
                                     <tr>
                                         <td class="QuestionText">Your Full Name  : <br /><br />
-                                        <input type="text" name="FullName" value="">
+                                        <input type="text" name="FullName" value="" required >
                                         </td>                                        
                                     </tr>                                    
                                     <tr>
@@ -136,16 +146,16 @@
                                     <!-- Question Start -->
                                     <tr>
                                         <td class="QuestionText">Your Gender  : <br /><br />
-                                        <select>
-                                        <option value="default">
+                                        <select id="idGender">
+                                        <option name="gender" value="default" selected="selected">
                                         Select One
                                         </option>
 
-                                        <option name="nGirl" value="girl">
+                                        <option name="gender" value="girl">
                                         Girl
                                         </option>
 
-                                        <option name="nBoy" value="boy">
+                                        <option name="gender" value="boy">
                                         Boy
                                         </option>
                                         </select>
@@ -162,7 +172,7 @@
                                     <!-- Question Start -->
                                     <tr>
                                         <td class="QuestionText">Your Company/School <i>( optional )</i> : <br /><br />
-                                        <input type="text" name="company" value="">
+                                        <input type="text" name="company" value="" >
                                         </td>                                        
                                     </tr>                                    
                                     <tr>
@@ -177,7 +187,7 @@
                                     <!-- Question Start -->
                                     <tr>
                                         <td class="QuestionText">Your Zip Code (for carpool use) : <br /><br />
-                                        <input type="text" name="zipcode" value="">
+                                        <input type="text" name="zipcode" value="" required>
                                         </td>                                        
                                     </tr>                                    
                                     <tr>
@@ -196,16 +206,17 @@
                                                 <td class="specified" style="width: 150px">
                                                 Do you want to drive? <br><br>
                                     
-                                                    <input type="radio" name="drive" value="Yes"> &nbsp; Yes
+                                                    <input type="radio" name="drive" value="Yes"  onclick="displayCarAccommodation(); "> &nbsp; Yes
                                                     
                                                     <br><br>
-                                                    <input type="radio" name="drive" value="Maybe"> &nbsp; Maybe
+                                                    <input type="radio" name="drive" value="Maybe" onclick="displayCarAccommodation(); "> &nbsp; If needed
 
                                                     <br><br>
-                                                    <input type="radio" name="drive" value="No"> &nbsp; No   
+                                                    <input type="radio" name="drive" value="No" onclick="hideCarAccommodation(); "> &nbsp; No   
                                                 </td>
-                                                <td class="specified"><br><br>How many people can be accommodated? <i> ( including yourself :) ) </i><br> <br>
-                                                    <select>
+                                                <td  id="carAccommodation" class="specified" style="display: none;">
+                                                    <br><br>How many people can be accommodated in your car? <i> ( including yourself :) ) </i><br> <br>
+                                                    <select required>
                                                     <option value="default">
                                                     Select One
                                                     </option>
@@ -213,19 +224,19 @@
                                                     <option name="nTwo" value="2">
                                                     2
                                                     </option>
-
+                                                        
+                                                    <option name="nFun" value="3.14">
+                                                    3.14
+                                                    </option> 
+                                                        
                                                     <option name="nFour" value="4">
                                                     4
                                                     </option>
 
                                                     <option name="nFive" value="5">
                                                     5
-                                                    </option>
-
-                                                    <option name="nFun" value="3.14">
-                                                    3.14
-                                                    </option>                                                        
-                                                    </select>                                                
+                                                    </option>                                                   
+                                                    </select>
                                                 </td>    
                                                 </tr>
                                         </table>
@@ -246,14 +257,14 @@
                                         <td class="QuestionText">
                                             Available Dates <i>( select all that apply )</i> <br><br>
                                             <div class="QuestionText">
-                                            <input type="checkbox" name="date[]" value="Apr12"> &nbsp; Apr 12 <br>
-                                            <input type="checkbox" name="date[]" value="Apr13"> &nbsp; Apr 13  <br>   
-                                            <input type="checkbox" name="date[]" value="Apr19"> &nbsp; Apr 19  <br>
-                                            <input type="checkbox" name="date[]" value="Apr20"> &nbsp; Apr 20  <br>
-                                            <input type="checkbox" name="date[]" value="Apr26"> &nbsp; Apr 26  <br>
-                                            <input type="checkbox" name="date[]" value="Apr27"> &nbsp; Apr 27  <br>
-                                            <input type="checkbox" name="date[]" value="May3">  &nbsp; May  3  <br>
-                                            <input type="checkbox" name="date[]" value="May4">  &nbsp; May  4  <br>    
+                                            <input type="checkbox" name="date[]" value="Apr12" required="required"> &nbsp; Apr 12  <br>
+                                            <input type="checkbox" name="date[]" value="Apr13" required="required"> &nbsp; Apr 13  <br>   
+                                            <input type="checkbox" name="date[]" value="Apr19" required="required"> &nbsp; Apr 19  <br>
+                                            <input type="checkbox" name="date[]" value="Apr20" required="required"> &nbsp; Apr 20  <br>
+                                            <input type="checkbox" name="date[]" value="Apr26" required="required"> &nbsp; Apr 26  <br>
+                                            <input type="checkbox" name="date[]" value="Apr27" required="required"> &nbsp; Apr 27  <br>
+                                            <input type="checkbox" name="date[]" value="May3"  required="required"> &nbsp; May  3  <br>
+                                            <input type="checkbox" name="date[]" value="May4"  required="required"> &nbsp; May  4  <br>    
                                             </div>    
                                         </td>
                                       </tr>                                    
