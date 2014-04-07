@@ -35,62 +35,43 @@ function hideCarAccommodation()
 console.log("DEF\n");
 function validateForm()
 {
-
-	console.log("ABC\n");
-	var error_msg = "";
-	var hasError = false;
-
 	// >>> check gender
 	var e = document.getElementById("idGender");
 	var genderText = e.options[e.selectedIndex].text;
 
 	if (genderText=="Select One")
 	{
-		error_msg += "Please choose your gender!\n";
-		//alert(error_msg);
-		hasError = true;
+		alert("Please select your gender!");
+		return false;		
 	}	
 	// <<< check gender
 
 	// >>> check radio car
-	alert("Here");
 	var doDrive = true;
-	var doDriveDom = document.getElementsByName("drive");
-	doDriveDom = doDriveDom[0].value;
-	alert("doDriveDom" + doDriveDom);
-	console.log("doDriveDom : " + doDriveDom + "\n");
-	if (doDriveDom == "No") {
-		doDrive = false;
-		alert("doDrive == false");
-	} else {
-		alert("doDrive == true");
-	}
 
-	//>>
-var radios = document.getElementsByName('drive');
+	var radios = document.getElementsByName('drive');
 
-for (var i = 0, length = radios.length; i < length; i++) {
-    if (radios[i].checked) {
-        // do whatever you want with the checked radio
-        alert(radios[i].value);
-		if(radios[i].value == "No") {
-			doDrive = false;
-		} else {
-			doDrive = true;
+	for (var i = 0, length = radios.length; i < length; i++) {
+		if (radios[i].checked) {
+			// do whatever you want with the checked radio
+			// alert(radios[i].value);
+			if(radios[i].value == "No") {
+				doDrive = false;
+			} else {
+				doDrive = true;
+			}
+			// only one radio can be logically checked, don't check the rest
+			break;
 		}
-        // only one radio can be logically checked, don't check the rest
-        break;
-    }
-}	
+	}	
 	
 	e = document.getElementById("carAccom");
 	var carAccomText = e.options[e.selectedIndex].text;
 	
 	if (doDrive && carAccomText=="3.14")
 	{
-		error_msg += "3.14 Man!\n";
-		alert("3.14? Really? Well we don't want to chainsaw anyone\n");
-		hasError = true;
+		alert("3.14? Really? Well we don't want to chainsaw anyone :(\n");
+		return false;
 	}	
 	// <<< check radio car
 	
@@ -98,12 +79,10 @@ for (var i = 0, length = radios.length; i < length; i++) {
 	e = document.getElementById("idZipCode");
 	var v = e.value;
 	var ratio = v / 90000;
-	console.log("v == "+v+"\n");
-	console.log("ratio == "+ratio+"\n");
 
 	if (v / 90000 < 1) {
-		alert("Looks like you are not in CA. 对不起, 我们输给了距离~\n");
-		//return false;		
+		alert("Looks like you are not in CA. Sorry, we lost to distance :( \n");
+		return false;		
 	}
 	// <<< check ZIP
 	
@@ -112,30 +91,26 @@ for (var i = 0, length = radios.length; i < length; i++) {
 	v = e.value;
 	var result = validateEmail(v);
 	if(result) {
-		alert("Good Email\n");
+		//alert("Good Email\n");
 	} else {
-		alert("Bad Email\n");
+		alert("Sorry your email is not valid\n");
+		return false;
 	}
 	// <<< check Email
 	
 	// >>> check Cell
 	e = document.getElementById("idCell");
 	v = e.value;
-	alert("cell : " + v);
 	result = phonenumber(v);
 	if(result) {
-		alert("Good Cell\n");
+		//alert("Good Cell\n");
 	} else {
-		alert("Bad Cell\n");
-	}
-	// <<< check Cell
-	
-	alert("after cell");	
-	if (hasError == true) {
-		alert(error_msg);
+		alert("Your cell number seems not valid\n");
 		return false;
 	}
-	return false;
+	// <<< check Cell
+
+	return true;
 }
 
 function phonenumber(inputtxt)
@@ -147,7 +122,7 @@ function phonenumber(inputtxt)
 	 }
    else
      {
-	   alert("Not a valid Phone Number");
+	   //alert("Not a valid Phone Number");
 	   return false;
      }
 }
