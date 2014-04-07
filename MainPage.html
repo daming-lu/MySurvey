@@ -14,9 +14,7 @@
   "http://www.questionpro.com/images/qphome/questionpro-thumbnail.png" /><!-- ?? -->
   <meta property="og:site_name" content="QuestionPro Online Surveys Made Easy" />
   <meta property="og:type" content="survey" />
-  <script language="JavaScript" src="file:///javascript/global.js?version=4" type=
-  "text/javascript">
-</script>
+
   <script src="./MainPage_files/jsapi" type="text/javascript">
 </script>
   <script type="text/javascript">
@@ -35,15 +33,12 @@
     
   <script src="./MainPage_files/jquery-ui.min.js" type="text/javascript">
 </script>
-  <script src="file:///javascript/jquery-1.7.1.min.js" type="text/javascript">
-</script>
-  <script src="file:///javascript/jquery-ui.min.js" type="text/javascript">
-</script>
+
   <link rel="stylesheet" href=
   "file:///Users/damingl/Playground/MySurvey/stylesheets/jquery-ui.css" type=
   "text/css" />
-  <script src="file:///javascript/jquery.ui.touch-punch.min.js" type="text/javascript">
-</script>
+
+    
   <link rel="stylesheet" type="text/css" href="./MainPage_files/navy.css" /><!-- zan! -->
   <!--[if IE]>
       <link rel="stylesheet" type="text/css" href="/stylesheets/position-fixed.css" />
@@ -187,7 +182,7 @@
                                     <!-- Question Start -->
                                     <tr>
                                         <td class="QuestionText">Your Zip Code (for carpool use) : <br /><br />
-                                        <input type="text" name="zipcode" value="" required>
+                                        <input type="text" id="idZipCode" name="zipcode" value="" required>
                                         </td>                                        
                                     </tr>                                    
                                     <tr>
@@ -216,7 +211,7 @@
                                                 </td>
                                                 <td  id="carAccommodation" class="specified" style="display: none;">
                                                     <br><br>How many people can be accommodated in your car? <i> ( including yourself :) ) </i><br> <br>
-                                                    <select name="sCarPeople" required>
+                                                    <select id="carAccom" name="sCarPeople" required>
                                                     <option value="default">
                                                     Select One
                                                     </option>
@@ -251,33 +246,67 @@
                                     </td>                                        
                                     </tr>
                                 
+
+                            <!-- Question Start -->
+                              <tr>
+                                <td class="QuestionText">
+                                    Available Dates <i>( select all that apply )</i> <br><br>
+                                    <div class="QuestionText">
+                                    <input type="checkbox" name="date[]" value="Apr19" required="required"> &nbsp; Apr 19  <br>
+                                    <input type="checkbox" name="date[]" value="Apr20" required="required"> &nbsp; Apr 20  <br>
+                                    <input type="checkbox" name="date[]" value="Apr26" required="required"> &nbsp; Apr 26  <br>
+                                    <input type="checkbox" name="date[]" value="Apr27" required="required"> &nbsp; Apr 27  <br>
+                                    <input type="checkbox" name="date[]" value="May3"  required="required"> &nbsp; May  3  <br>
+                                    <input type="checkbox" name="date[]" value="May4"  required="required"> &nbsp; May  4  <br>
+                                        
+                                    <input type="checkbox" name="date[]" value="May10" required="required"> &nbsp; May 10  <br>
+                        
+                                    <input type="checkbox" name="date[]" value="May11" required="required"> &nbsp; May 11  <br> 
+                                    </div>    
+                                </td>
+                              </tr>                                    
+
+                            <tr>
+                            <td>
+                              <div class="SurveyDivider">
+                                &nbsp;
+                              </div>
+                            </td>
+                            </tr>
+
+                            <!-- Question End --> 
                                     
-                                    <!-- Question Start -->
-                                      <tr>
-                                        <td class="QuestionText">
-                                            Available Dates <i>( select all that apply )</i> <br><br>
-                                            <div class="QuestionText">
-                                            <input type="checkbox" name="date[]" value="Apr12" required="required"> &nbsp; Apr 12  <br>
-                                            <input type="checkbox" name="date[]" value="Apr13" required="required"> &nbsp; Apr 13  <br>   
-                                            <input type="checkbox" name="date[]" value="Apr19" required="required"> &nbsp; Apr 19  <br>
-                                            <input type="checkbox" name="date[]" value="Apr20" required="required"> &nbsp; Apr 20  <br>
-                                            <input type="checkbox" name="date[]" value="Apr26" required="required"> &nbsp; Apr 26  <br>
-                                            <input type="checkbox" name="date[]" value="Apr27" required="required"> &nbsp; Apr 27  <br>
-                                            <input type="checkbox" name="date[]" value="May3"  required="required"> &nbsp; May  3  <br>
-                                            <input type="checkbox" name="date[]" value="May4"  required="required"> &nbsp; May  4  <br>    
-                                            </div>    
-                                        </td>
-                                      </tr>                                    
                                     
-                                    <tr>
-                                    <td>
-                                      <div class="SurveyDivider">
-                                        &nbsp;
-                                      </div>
-                                    </td>
-                                    </tr>
+<!-- Question Start -->
+<tr>
+    <td class="QuestionText">Your Email : <br /><br />
+    <input type="text" name="email" value="" required>
+    </td>                                        
+</tr>                                    
+<tr>
+<td>
+  <div class="SurveyDivider">
+    &nbsp;
+  </div>
+</td>
+</tr>    
+<!-- Question End -->   
+<!-- Question Start -->
+<tr>
+    <td class="QuestionText">Your Cell : <br /><br />
+    <input type="text" name="cell" value="" required>
+    </td>                                        
+</tr>                                    
+<tr>
+<td>
+  <div class="SurveyDivider">
+    &nbsp;
+  </div>
+</td>
+</tr>    
+<!-- Question End -->                                    
                                     
-                                    <!-- Question End --> 
+                                    
                                   <!-- Question Start -->
 
                                   <tr>
