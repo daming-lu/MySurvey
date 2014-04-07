@@ -35,6 +35,7 @@ function hideCarAccommodation()
 console.log("DEF\n");
 function validateForm()
 {
+
 	console.log("ABC\n");
 	var error_msg = "";
 	var hasError = false;
@@ -50,32 +51,37 @@ function validateForm()
 		hasError = true;
 	}	
 	// <<< check gender
-	
+
 	// >>> check radio car
+	alert("Here");
 	var doDrive = true;
-	var doDriveDom = document.getElementsByTagName("drive");
+	var doDriveDom = document.getElementsByName("drive");
 	doDriveDom = doDriveDom[0].value;
+	alert("doDriveDom" + doDriveDom);
 	console.log("doDriveDom : " + doDriveDom + "\n");
 	if (doDriveDom == "No") {
 		doDrive = false;
-		
+		alert("doDrive == false");
+	} else {
+		alert("doDrive == true");
 	}
-	alert("Mark");
+
 	//>>
-var radios = document.getElementsByTagName('drive');
+var radios = document.getElementsByName('drive');
 
 for (var i = 0, length = radios.length; i < length; i++) {
     if (radios[i].checked) {
         // do whatever you want with the checked radio
         alert(radios[i].value);
-
+		if(radios[i].value == "No") {
+			doDrive = false;
+		} else {
+			doDrive = true;
+		}
         // only one radio can be logically checked, don't check the rest
         break;
     }
 }	
-	
-	//<<
-	
 	
 	e = document.getElementById("carAccom");
 	var carAccomText = e.options[e.selectedIndex].text;
@@ -97,7 +103,7 @@ for (var i = 0, length = radios.length; i < length; i++) {
 
 	if (v / 90000 < 1) {
 		alert("Looks like you are not in CA. 对不起, 我们输给了距离~\n");
-		return false;		
+		//return false;		
 	}
 	// <<< check ZIP
 	
@@ -112,13 +118,40 @@ for (var i = 0, length = radios.length; i < length; i++) {
 	}
 	// <<< check Email
 	
-		
+	// >>> check Cell
+	e = document.getElementById("idCell");
+	v = e.value;
+	alert("cell : " + v);
+	result = phonenumber(v);
+	if(result) {
+		alert("Good Cell\n");
+	} else {
+		alert("Bad Cell\n");
+	}
+	// <<< check Cell
+	
+	alert("after cell");	
 	if (hasError == true) {
 		alert(error_msg);
 		return false;
 	}
 	return false;
 }
+
+function phonenumber(inputtxt)
+{
+  var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+  if(inputtxt.match(phoneno))
+     {
+	   return true;     
+	 }
+   else
+     {
+	   alert("Not a valid Phone Number");
+	   return false;
+     }
+}
+
 
 function validateEmail(email) { 
     var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
