@@ -54,19 +54,35 @@ function validateForm()
 	// >>> check radio car
 	var doDrive = true;
 	var doDriveDom = document.getElementsByTagName("drive");
-	doDriveDom = doDriveDom[0];
-	
+	doDriveDom = doDriveDom[0].value;
+	console.log("doDriveDom : " + doDriveDom + "\n");
 	if (doDriveDom == "No") {
 		doDrive = false;
+		
 	}
+	alert("Mark");
+	//>>
+var radios = document.getElementsByTagName('drive');
+
+for (var i = 0, length = radios.length; i < length; i++) {
+    if (radios[i].checked) {
+        // do whatever you want with the checked radio
+        alert(radios[i].value);
+
+        // only one radio can be logically checked, don't check the rest
+        break;
+    }
+}	
+	
+	//<<
 	
 	
 	e = document.getElementById("carAccom");
 	var carAccomText = e.options[e.selectedIndex].text;
 	
-	if (carAccomText=="3.14")
+	if (doDrive && carAccomText=="3.14")
 	{
-		error_msg += "Please choose your gender!\n";
+		error_msg += "3.14 Man!\n";
 		alert("3.14? Really? Well we don't want to chainsaw anyone\n");
 		hasError = true;
 	}	
@@ -74,17 +90,40 @@ function validateForm()
 	
 	// >>> check ZIP
 	e = document.getElementById("idZipCode");
-	var v = e.text;
-	console.log("idZipCode == "+v);
-	// <<< check ZIP	
+	var v = e.value;
+	var ratio = v / 90000;
+	console.log("v == "+v+"\n");
+	console.log("ratio == "+ratio+"\n");
+
+	if (v / 90000 < 1) {
+		alert("Looks like you are not in CA. 对不起, 我们输给了距离~\n");
+		return false;		
+	}
+	// <<< check ZIP
+	
+	// >>> check Email
+	e = document.getElementById("idEmail");
+	v = e.value;
+	var result = validateEmail(v);
+	if(result) {
+		alert("Good Email\n");
+	} else {
+		alert("Bad Email\n");
+	}
+	// <<< check Email
+	
 		
 	if (hasError == true) {
 		alert(error_msg);
 		return false;
 	}
-	return true;
+	return false;
 }
 
+function validateEmail(email) { 
+    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+} 
 
 // at least one checkbox
 $(function(){
