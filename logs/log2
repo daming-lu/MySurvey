@@ -1,23 +1,62 @@
 _POST : Array
 (
-    [FullName] => Daming Lu
-    [sGender] => boy
-    [company] => Zoosk
+    [FullName] => test2
+    [sGender] => girl
+    [company] => 
     [zipcode] => 94122
     [drive] => Maybe
-    [sCarPeople] => 5
+    [sCarPeople] => 4
     [date] => Array
         (
-            [0] => Apr26
-            [1] => Apr27
-            [2] => May3
-            [3] => May4
-            [4] => May10
-            [5] => May11
+            [0] => May10
+            [1] => May11
         )
 
-    [email] => damingl@zoosk.com
+    [email] => daminglu2012@hotmail.com
     [cell] => 4152643523
-    [comments] => Daming Haha
+    [comments] => 
+)
+
+_POST : Array
+(
+    [FullName] => test2
+    [sGender] => boy
+    [company] => google
+    [zipcode] => 94122
+    [drive] => No
+    [sCarPeople] => 2
+    [date] => Array
+        (
+            [0] => Apr19
+        )
+
+    [email] => daminglu2012@hotmail.com
+    [cell] => 4152643523
+    [comments] => 
+)
+
+_POST : Array
+(
+    [FullName] => abc
+    [sGender] => girl
+    [company] => Zoosk
+    [zipcode] => 94122
+    [drive] => No
+    [sCarPeople] => default
+    [date] => Array
+        (
+            [0] => Apr19
+            [1] => Apr20
+            [2] => Apr26
+            [3] => Apr27
+            [4] => May3
+            [5] => May4
+            [6] => May10
+            [7] => May11
+        )
+
+    [email] => daminglu2012@hotmail.com
+    [cell] => 4152643523
+    [comments] => 
 )
 
