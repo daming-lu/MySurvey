@@ -6,7 +6,7 @@ file_put_contents("../logs/log2","_POST : ".print_r($_POST,true)."\n", FILE_APPE
 // get all the inputs
 	
 $FullName 	= $_POST['FullName'];
-$Gender 	= $_POST['sGender'];
+$Gender 	= $_POST['sGender']=="girl" ? 0 : 1;
 $Company 	= isset($_POST['company']) ? $_POST['company'] : "no company";
 $ZipCode 	= $_POST['zipcode'];
 $Driver 	= $_POST['drive'];
@@ -24,7 +24,7 @@ file_put_contents("../logs/log4","Dates : ".print_r($Dates,true)."\n", FILE_APPE
 $newDates = $Dates[0];
 for($i=1; $i<count($Dates); $i++){
 	$tmp = "|".$Dates[$i];
-	$newDates += $tmp;
+	$newDates .= $tmp; // .= !!! += is arithmetic!
 }
 file_put_contents("../logs/log3","newDates : ".print_r($newDates,true)."\n", FILE_APPEND|LOCK_EX);
 
