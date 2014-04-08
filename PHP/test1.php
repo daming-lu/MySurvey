@@ -19,11 +19,14 @@ $comments	= isset($_POST['comments'])?$_POST['comments']:"no comment";
 //------------------------------------------------------------------------------------------
 // concatenate dates
 
+file_put_contents("../logs/log4","Dates : ".print_r($Dates,true)."\n", FILE_APPEND|LOCK_EX);
+
 $newDates = $Dates[0];
 for($i=1; $i<count($Dates); $i++){
 	$tmp = "|".$Dates[$i];
 	$newDates += $tmp;
 }
+file_put_contents("../logs/log3","newDates : ".print_r($newDates,true)."\n", FILE_APPEND|LOCK_EX);
 
 //------------------------------------------------------------------------------------------
 // connect to DataBase
