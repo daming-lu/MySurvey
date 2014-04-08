@@ -1,0 +1,23 @@
+_POST : Array
+(
+    [FullName] => Daming Lu
+    [sGender] => boy
+    [company] => Zoosk
+    [zipcode] => 94122
+    [drive] => Maybe
+    [sCarPeople] => 5
+    [date] => Array
+        (
+            [0] => Apr26
+            [1] => Apr27
+            [2] => May3
+            [3] => May4
+            [4] => May10
+            [5] => May11
+        )
+
+    [email] => damingl@zoosk.com
+    [cell] => 4152643523
+    [comments] => Daming Haha
+)
+
