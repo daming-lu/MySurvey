@@ -120,13 +120,13 @@ mysqli_close($con);
 </head>
 <body>
 
-    <table border="1" style="width:1290px;height:600px">
+    <table border="1" style="width:1390px;height:440px">
         <tr>
           <td>
-            <iframe width="640px" height="300px" src="http://peirongli.dreamhosters.com/MySurvey/d3/indexPie.html"></iframe>
+            <iframe width="640px" height="400px" src="http://peirongli.dreamhosters.com/MySurvey/d3/indexPie.html"></iframe>
           </td>            
           <td>
-            <iframe width="640px" height="300px" src="http://peirongli.dreamhosters.com/MySurvey/arch/indexArch.html"></iframe>
+            <iframe width="640px" height="400px" src="http://peirongli.dreamhosters.com/MySurvey/arch/indexArch.html"></iframe>
           </td>
         </tr>
 	</table>
