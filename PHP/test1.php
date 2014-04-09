@@ -112,25 +112,64 @@ foreach ($Dates as $key => $value) {
 mysqli_close($con);
 ?>
 
-//------------------------------------------------------------------------------------------
-// render page
-
 <!DOCTYPE html>
 <html>
 <head>
 	<title><?= $boys ?></title>
+	<title>Survey Results</title>
 </head>
 <body>
 
-<h1>My First Heading</h1>
-
-<p>My first paragraph.</p>
+    <table border="1" style="width:1280px;height:600px">
+        <tr>
+          <td>
+            <iframe width="640px" height="600px" src="http://peirongli.dreamhosters.com/WiX/FitnessManager2/hist.html"></iframe>
+          </td>
+          <td>
+            <iframe width="640px" height="600px" src="http://peirongli.dreamhosters.com/MySurvey/d3/indexPie.html"></iframe>
+          </td>
+        </tr>
+	</table>
+    <p></p>
+    <table style="width:1280px;height:600px">
+        <tr>
+            <td><b>姓名       </b></td>
+            <td><b>手机       </b></b></td>
+            <td><b>电邮       </b></td>
+            <td><b>公雌       </b></td>
+            <td><b>单位       </b></td>
+            <td><b>邮政编码    </b></td>
+            <td><b>是否开车    </b></td>
+            <td><b>宰人能力     </b></td>
+            <td><b>可行的时间   </b></td>        
+            <td><b>有话要说     </b></td>
+        </tr>
+        <?php
+            foreach($dataBlobs as $person) {
+                echo '<tr>';
+                echo '<td>'.$person['FullName'].'</td>';
+                echo '<td>'.$person['Cell'].'</td>';
+                echo '<td>'.$person['Email'].'</td>';
+    
+                if ($person['Gender'] == 0) {
+                    echo '<td>偶系铝生</td>';
+                } else{
+                    echo '<td>偶系峦生</td>';   
+                }
+                
+                echo '<td>'.$person['Company'].'</td>';                
+                echo '<td>'.$person['ZipCode'].'</td>';
+                echo '<td>'.$person['Driver'].'</td>';
+                echo '<td>'.$person['CarAccomm'].'</td>';
+    
+                $datesComma = str_replace("|", ", ", $person['Dates']);
+                echo '<td>'.$datesComma.'</td>';
+                echo '<td>'.$person['Comments'].'</td>';
+                echo '</tr>';
+            }
+        ?>
+    
+    </table>
 
 </body>
 </html>
-
-//------------------------------------------------------------------------------------------
-
-//------------------------------------------------------------------------------------------
-//header("location: http://peirongli.dreamhosters.com/MySurvey/MainPage.html");
-
