@@ -104,11 +104,6 @@ file_put_contents("../d3/data.csv","age,population\n$girls,$boys\n");
 
 // Arch for Dates
 file_put_contents("../arch/data.csv","age,population\n");
-
-for($i=0; $i<count($Dates); $i++) {
-	file_put_contents("../arch/data.csv","$DatesMapping[$Dates[$i]],\n");
-}
-
 foreach ($Dates as $key => $value) {
 	file_put_contents("../arch/data.csv","$DatesMapping[$key],$value\n", FILE_APPEND|LOCK_EX);
 }
