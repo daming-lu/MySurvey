@@ -110,6 +110,7 @@ foreach ($Dates as $key => $value) {
 // >> 
 
 mysqli_close($con);
+?>
 
 //------------------------------------------------------------------------------------------
 // render page
@@ -133,4 +134,3 @@ mysqli_close($con);
 //------------------------------------------------------------------------------------------
 //header("location: http://peirongli.dreamhosters.com/MySurvey/MainPage.html");
 
-?>
