@@ -100,7 +100,7 @@ file_put_contents("../logs/log2","dataBlobs : ".print_r($dataBlobs,true)."\n", F
 file_put_contents("../logs/log2","boys $boys and girls $girls\n", FILE_APPEND|LOCK_EX);
 
 // Pie for Gender
-file_put_contents("../d3/data.csv","age,population\n$girls,$boys\n");
+file_put_contents("../d3/data.csv","age,population\nboys,$boys\ngirls,$girls\n");
 
 // Arch for Dates
 file_put_contents("../arch/data.csv","age,population\n");
@@ -112,6 +112,21 @@ foreach ($Dates as $key => $value) {
 mysqli_close($con);
 
 //------------------------------------------------------------------------------------------
+// render page
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title><?= $boys ?></title>
+</head>
+<body>
+
+<h1>My First Heading</h1>
+
+<p>My first paragraph.</p>
+
+</body>
+</html>
 
 //------------------------------------------------------------------------------------------
 
