@@ -26,7 +26,7 @@ for($i=1; $i<count($Dates); $i++){
 	$tmp = "|".$Dates[$i];
 	$newDates .= $tmp; // .= !!! += is arithmetic!
 }
-file_put_contents("../logs/log3","newDates : ".print_r($newDates,true)."\n", FILE_APPEND|LOCK_EX);
+//file_put_contents("../logs/log3","newDates : ".print_r($newDates,true)."\n", FILE_APPEND|LOCK_EX);
 
 //------------------------------------------------------------------------------------------
 // connect to DataBase
@@ -37,12 +37,25 @@ $password="FitnessManager"; 				// Mysql password
 $db_name="damingdb"; 						// Database name 
 $tbl_name="Paintball"; 						// Table name 
 
-// Connect to server and select databse.
+// connect to db and insert
 $con = mysqli_connect("$host", "$username", "$password","$db_name");
 
 $sql="INSERT INTO Paintball (FullName, Gender, Company, ZipCode, Driver, CarAccomm, Dates, Email, Cell, Comments) VALUES ('$FullName','$Gender','$Company','$ZipCode','$Driver','$CarAccomm','$newDates','$Email','$Cell','$comments')";
 
 mysqli_query($con,$sql);
+
+// then query db to get the latest list
+
+$sql="SELECT * FROM $tbl_name";
+
+$result=mysqli_query($con,$sql);
+$i=0;
+while($row = mysqli_fetch_array($result)) {
+	$i++;
+	file_put_contents("../logs/log3","row [$i]: ".print_r($row,true)."\n", FILE_APPEND|LOCK_EX);
+}
+
+
 
 mysqli_close($con);
 
