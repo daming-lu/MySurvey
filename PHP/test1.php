@@ -116,23 +116,22 @@ mysqli_close($con);
 <html>
 <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">    
 <head>
-	<title><?= $boys ?></title>
 	<title>Survey Results</title>
 </head>
 <body>
 
-    <table border="1" style="width:1280px;height:600px">
+    <table border="1" style="width:1290px;height:600px">
         <tr>
           <td>
-            <iframe width="640px" height="600px" src="http://peirongli.dreamhosters.com/WiX/FitnessManager2/hist.html"></iframe>
-          </td>
+            <iframe width="640px" height="300px" src="http://peirongli.dreamhosters.com/MySurvey/d3/indexPie.html"></iframe>
+          </td>            
           <td>
-            <iframe width="640px" height="600px" src="http://peirongli.dreamhosters.com/MySurvey/d3/indexPie.html"></iframe>
+            <iframe width="640px" height="300px" src="http://peirongli.dreamhosters.com/MySurvey/arch/indexArch.html"></iframe>
           </td>
         </tr>
 	</table>
     <p></p>
-    <table style="width:1280px;height:600px">
+    <table border="1" style="width:1290px">
         <tr>
             <td><b>姓名       </b></td>
             <td><b>手机       </b></b></td>
@@ -153,9 +152,9 @@ mysqli_close($con);
                 echo '<td>'.$person['Email'].'</td>';
     
                 if ($person['Gender'] == 0) {
-                    echo '<td>偶系铝生</td>';
+                    echo '<td>女生</td>';
                 } else{
-                    echo '<td>偶系峦生</td>';   
+                    echo '<td>男生</td>';   
                 }
                 
                 echo '<td>'.$person['Company'].'</td>';                
