@@ -131,7 +131,7 @@ mysqli_close($con);
         </tr>
 	</table>
     <p></p>
-    <table border="1" style="width:1490px">
+    <table border="1" style="width:1490px" align="right">
         <tr>
             <td><b>姓名       </b></td>
             <td><b>手机       </b></b></td>
