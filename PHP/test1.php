@@ -53,9 +53,16 @@ $sql="SELECT * FROM $tbl_name";
 
 $result=mysqli_query($con,$sql);
 $i=0;
+
+// for pie charts
+$dataBlobs = array();
+
+
+
 while($row = mysqli_fetch_array($result)) {
 	$i++;
 	file_put_contents("../logs/log3","row [$i]: ".print_r($row,true)."\n", FILE_APPEND|LOCK_EX);
+	$dataBlobs []= $row;
 }
 
 // >> 
