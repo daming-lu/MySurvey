@@ -43,7 +43,7 @@ $tbl_name="Paintball"; 						// Table name
 $con = mysqli_connect("$host", "$username", "$password","$db_name");
 
 // check dup using cell
-$sql="SELECT * FROM $tbl_name WHERE Cell=$Cell;";
+$sql="SELECT * FROM $tbl_name WHERE Cell='$Cell'";
 $result=mysqli_query($con,$sql);
 
 $count=mysql_num_rows($result);
