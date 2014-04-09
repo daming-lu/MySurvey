@@ -21,7 +21,7 @@ $comments	= isset($_POST['comments'])?$_POST['comments']:"no comment";
 //------------------------------------------------------------------------------------------
 // concatenate dates
 
-file_put_contents("../logs/log4","Dates : ".print_r($Dates,true)."\n", FILE_APPEND|LOCK_EX);
+//file_put_contents("../logs/log4","Dates : ".print_r($Dates,true)."\n", FILE_APPEND|LOCK_EX);
 
 $newDates = $Dates[0];
 for($i=1; $i<count($Dates); $i++){
@@ -44,7 +44,8 @@ $con = mysqli_connect("$host", "$username", "$password","$db_name");
 
 // check dup using cell
 $sql="SELECT * FROM $tbl_name WHERE Cell='$Cell'";
-$result=mysql_query($sql,$con);
+$result=mysqli_query($con,$sql);
+file_put_contents("../logs/log4","result : ".print_r($result,true)."\n", FILE_APPEND|LOCK_EX);
 
 $count=mysql_num_rows($result);
 
