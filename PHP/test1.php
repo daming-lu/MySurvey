@@ -1,7 +1,9 @@
 <?php
 //------------------------------------------------------------------------------------------
 file_put_contents("../logs/log2","_POST : ".print_r($_POST,true)."\n", FILE_APPEND|LOCK_EX);
-
+$columns = array(
+	"PersonID","FullName","Gender","Company","ZipCode","Driver","CarAccomm","Dates","Email","Cell","Comments"
+);
 //------------------------------------------------------------------------------------------
 // get all the inputs
 	
@@ -48,6 +50,7 @@ mysqli_query($con,$sql);
 
 $sql="SELECT * FROM $tbl_name";
 
+
 $result=mysqli_query($con,$sql);
 $i=0;
 while($row = mysqli_fetch_array($result)) {
@@ -55,7 +58,7 @@ while($row = mysqli_fetch_array($result)) {
 	file_put_contents("../logs/log3","row [$i]: ".print_r($row,true)."\n", FILE_APPEND|LOCK_EX);
 }
 
-
+// >> 
 
 mysqli_close($con);
 
@@ -64,6 +67,6 @@ mysqli_close($con);
 //------------------------------------------------------------------------------------------
 
 //------------------------------------------------------------------------------------------
-header("location: http://peirongli.dreamhosters.com/MySurvey/MainPage.html");
+//header("location: http://peirongli.dreamhosters.com/MySurvey/MainPage.html");
 
 ?>
