@@ -56,14 +56,39 @@ $i=0;
 
 // for pie charts
 $dataBlobs = array();
+$Dates = array(
+	"Apr19" 	=> 0,
+	"Apr20" 	=> 0,
+	"Apr26" 	=> 0,
+	"Apr27" 	=> 0,
+	"May3" 		=> 0,
+	"May4" 		=> 0,
+	"May10" 	=> 0,
+	"May11" 	=> 0
+);
 
-
+$boys = 0;
+$girls = 0;
 
 while($row = mysqli_fetch_array($result)) {
 	$i++;
 	file_put_contents("../logs/log3","row [$i]: ".print_r($row,true)."\n", FILE_APPEND|LOCK_EX);
 	$dataBlobs []= $row;
+	$curDates = $row['Dates'];
+	$dates = explode("|", $curDates);
+	foreach($dates as $date) {
+		$Dates[$date]++;
+	}
+	if ($row['Gender'] == 0) {
+		$girls++;
+	} else {
+		$boys++;
+	}
 }
+
+file_put_contents("../logs/log1","Dates : ".print_r($Dates,true)."\n", FILE_APPEND|LOCK_EX);
+file_put_contents("../logs/log2","dataBlobs : ".print_r($dataBlobs,true)."\n", FILE_APPEND|LOCK_EX);
+file_put_contents("../logs/log2","boys $boys and girls $girls\n", FILE_APPEND|LOCK_EX);
 
 // >> 
 
