@@ -42,6 +42,18 @@ $tbl_name="Paintball"; 						// Table name
 // connect to db and insert
 $con = mysqli_connect("$host", "$username", "$password","$db_name");
 
+// check dup using cell
+$sql="SELECT * FROM $tbl_name WHERE Cell=$Cell;";
+$result=mysqli_query($con,$sql);
+
+$count=mysql_num_rows($result);
+
+if($count>=1){
+    echo "<h1>You've registered before</h1>";
+    return;
+}
+
+// insert
 $sql="INSERT INTO Paintball (FullName, Gender, Company, ZipCode, Driver, CarAccomm, Dates, Email, Cell, Comments) VALUES ('$FullName','$Gender','$Company','$ZipCode','$Driver','$CarAccomm','$newDates','$Email','$Cell','$comments')";
 
 mysqli_query($con,$sql);
