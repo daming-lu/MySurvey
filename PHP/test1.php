@@ -131,8 +131,8 @@ mysqli_close($con);
         </tr>
 	</table>
     <p></p>
-    <table border="1" style="width:1490px" align="right">
-        <tr>
+    <table border="1" style="width:1490px">
+        <tr align="right">
             <td><b>姓名       </b></td>
             <td><b>手机       </b></b></td>
             <td><b>电邮       </b></td>
@@ -146,7 +146,7 @@ mysqli_close($con);
         </tr>
         <?php
             foreach($dataBlobs as $person) {
-                echo '<tr>';
+                echo '<tr align="right">';
                 echo '<td>'.$person['FullName'].'</td>';
                 echo '<td>'.$person['Cell'].'</td>';
                 echo '<td>'.$person['Email'].'</td>';
