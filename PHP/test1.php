@@ -120,7 +120,7 @@ mysqli_close($con);
 </head>
 <body>
 
-    <table border="1" style="width:1390px;height:440px">
+    <table style="width:1490px;height:440px">
         <tr>
           <td>
             <iframe width="640px" height="400px" src="http://peirongli.dreamhosters.com/MySurvey/d3/indexPie.html"></iframe>
@@ -131,7 +131,7 @@ mysqli_close($con);
         </tr>
 	</table>
     <p></p>
-    <table border="1" style="width:1290px">
+    <table border="1" style="width:1490px">
         <tr>
             <td><b>姓名       </b></td>
             <td><b>手机       </b></b></td>
