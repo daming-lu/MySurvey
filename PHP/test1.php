@@ -114,6 +114,7 @@ mysqli_close($con);
 
 <!DOCTYPE html>
 <html>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">    
 <head>
 	<title><?= $boys ?></title>
 	<title>Survey Results</title>
