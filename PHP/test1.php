@@ -44,7 +44,7 @@ $con = mysqli_connect("$host", "$username", "$password","$db_name");
 
 // check dup using cell
 $sql="SELECT * FROM $tbl_name WHERE Cell='$Cell'";
-$result=mysqli_query($con,$sql);
+$result=mysql_query($sql,$con);
 
 $count=mysql_num_rows($result);
 
