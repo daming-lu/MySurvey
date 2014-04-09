@@ -66,7 +66,16 @@ $Dates = array(
 	"May10" 	=> 0,
 	"May11" 	=> 0
 );
-
+$DatesMapping = array(
+	"Apr19" 	=> "Apr 19",
+	"Apr20" 	=> "Apr 20",
+	"Apr26" 	=> "Apr 26",
+	"Apr27" 	=> "Apr 27",
+	"May3" 		=> "May  3",
+	"May4" 		=> "May  4",
+	"May10" 	=> "May 10",
+	"May11" 	=> "May 11"
+);
 $boys = 0;
 $girls = 0;
 
@@ -90,6 +99,19 @@ file_put_contents("../logs/log1","Dates : ".print_r($Dates,true)."\n", FILE_APPE
 file_put_contents("../logs/log2","dataBlobs : ".print_r($dataBlobs,true)."\n", FILE_APPEND|LOCK_EX);
 file_put_contents("../logs/log2","boys $boys and girls $girls\n", FILE_APPEND|LOCK_EX);
 
+// Pie for Gender
+file_put_contents("../d3/data.csv","age,population\n$girls,$boys\n");
+
+// Arch for Dates
+file_put_contents("../arch/data.csv","age,population\n");
+
+for($i=0; $i<count($Dates); $i++) {
+	file_put_contents("../arch/data.csv","$DatesMapping[$Dates[$i]],\n");
+}
+
+foreach ($Dates as $key => $value) {
+	file_put_contents("../arch/data.csv","$DatesMapping[$key],$value\n", FILE_APPEND|LOCK_EX);
+}
 // >> 
 
 mysqli_close($con);
