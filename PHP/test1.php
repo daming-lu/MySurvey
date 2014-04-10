@@ -93,6 +93,9 @@ $boys = 0;
 $girls = 0;
 
 while($row = mysqli_fetch_array($result)) {
+	if(empty($row['FullName'])){
+		continue;
+	}
 	$i++;
 	//file_put_contents("../logs/log3","row [$i]: ".print_r($row,true)."\n", FILE_APPEND|LOCK_EX);
 	$dataBlobs []= $row;
