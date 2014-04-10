@@ -47,8 +47,8 @@ $sql="SELECT * FROM $tbl_name WHERE Cell='$Cell'";
 $result=mysqli_query($con,$sql);
 file_put_contents("../logs/log4","result : ".print_r($result,true)."\n", FILE_APPEND|LOCK_EX);
 
-$count=mysql_num_rows($result);
-
+//$count=mysql_num_rows($result);
+$count = $result->num_rows;
 if($count>=1){
     echo "<h1>You've registered before</h1>";
     return;
