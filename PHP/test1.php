@@ -1,6 +1,6 @@
 <?php
 //------------------------------------------------------------------------------------------
-file_put_contents("../logs/log2","_POST : ".print_r($_POST,true)."\n", FILE_APPEND|LOCK_EX);
+//file_put_contents("../logs/log2","_POST : ".print_r($_POST,true)."\n", FILE_APPEND|LOCK_EX);
 $columns = array(
 	"PersonID","FullName","Gender","Company","ZipCode","Driver","CarAccomm","Dates","Email","Cell","Comments"
 );
@@ -45,7 +45,7 @@ $con = mysqli_connect("$host", "$username", "$password","$db_name");
 // check dup using cell
 $sql="SELECT * FROM $tbl_name WHERE Cell='$Cell'";
 $result=mysqli_query($con,$sql);
-file_put_contents("../logs/log4","result : ".print_r($result,true)."\n", FILE_APPEND|LOCK_EX);
+//file_put_contents("../logs/log4","result : ".print_r($result,true)."\n", FILE_APPEND|LOCK_EX);
 
 //$count=mysql_num_rows($result);
 $count = $result->num_rows;
@@ -94,7 +94,7 @@ $girls = 0;
 
 while($row = mysqli_fetch_array($result)) {
 	$i++;
-	file_put_contents("../logs/log3","row [$i]: ".print_r($row,true)."\n", FILE_APPEND|LOCK_EX);
+	//file_put_contents("../logs/log3","row [$i]: ".print_r($row,true)."\n", FILE_APPEND|LOCK_EX);
 	$dataBlobs []= $row;
 	$curDates = $row['Dates'];
 	$dates = explode("|", $curDates);
@@ -108,17 +108,17 @@ while($row = mysqli_fetch_array($result)) {
 	}
 }
 
-file_put_contents("../logs/log1","Dates : ".print_r($Dates,true)."\n", FILE_APPEND|LOCK_EX);
-file_put_contents("../logs/log2","dataBlobs : ".print_r($dataBlobs,true)."\n", FILE_APPEND|LOCK_EX);
-file_put_contents("../logs/log2","boys $boys and girls $girls\n", FILE_APPEND|LOCK_EX);
+//file_put_contents("../logs/log1","Dates : ".print_r($Dates,true)."\n", FILE_APPEND|LOCK_EX);
+//file_put_contents("../logs/log2","dataBlobs : ".print_r($dataBlobs,true)."\n", FILE_APPEND|LOCK_EX);
+//file_put_contents("../logs/log2","boys $boys and girls $girls\n", FILE_APPEND|LOCK_EX);
 
 // Pie for Gender
-file_put_contents("../d3/data.csv","age,population\nboys,$boys\ngirls,$girls\n");
+//file_put_contents("../d3/data.csv","age,population\nboys,$boys\ngirls,$girls\n");
 
 // Arch for Dates
-file_put_contents("../arch/data.csv","age,population\n");
+//file_put_contents("../arch/data.csv","age,population\n");
 foreach ($Dates as $key => $value) {
-	file_put_contents("../arch/data.csv","$DatesMapping[$key],$value\n", FILE_APPEND|LOCK_EX);
+	//file_put_contents("../arch/data.csv","$DatesMapping[$key],$value\n", FILE_APPEND|LOCK_EX);
 }
 // >> 
 

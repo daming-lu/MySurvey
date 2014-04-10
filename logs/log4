@@ -1,23 +1,563 @@
 Dates : Array
 (
-    [0] => May10
+    [0] => May11
+)
+
+Dates : Array
+(
+    [0] => Apr19
     [1] => May11
 )
 
 Dates : Array
 (
     [0] => Apr19
+    [1] => Apr20
 )
 
 Dates : Array
 (
-    [0] => Apr19
-    [1] => Apr20
-    [2] => Apr26
-    [3] => Apr27
-    [4] => May3
-    [5] => May4
-    [6] => May10
-    [7] => May11
+    [0] => May10
+    [1] => May11
+)
+
+Dates : Array
+(
+    [0] => May10
+    [1] => May11
+)
+
+Dates : Array
+(
+    [0] => May10
+    [1] => May11
+)
+
+Dates : Array
+(
+    [0] => May10
+    [1] => May11
+)
+
+Dates : Array
+(
+    [0] => May10
+    [1] => May11
+)
+
+Dates : Array
+(
+    [0] => May10
+    [1] => May11
+)
+
+Dates : Array
+(
+    [0] => May10
+    [1] => May11
+)
+
+Dates : Array
+(
+    [0] => May10
+    [1] => May11
+)
+
+Dates : Array
+(
+    [0] => May10
+    [1] => May11
+)
+
+Dates : Array
+(
+    [0] => May10
+    [1] => May11
+)
+
+Dates : Array
+(
+    [0] => May10
+    [1] => May11
+)
+
+Dates : Array
+(
+    [0] => May10
+    [1] => May11
+)
+
+Dates : Array
+(
+    [0] => May10
+    [1] => May11
+)
+
+Dates : Array
+(
+    [0] => May10
+    [1] => May11
+)
+
+Dates : Array
+(
+    [0] => May10
+    [1] => May11
+)
+
+Dates : Array
+(
+    [0] => May10
+    [1] => May11
+)
+
+result : mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 11
+    [lengths] => 
+    [num_rows] => 25
+    [type] => 0
+)
+
+result : mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 11
+    [lengths] => 
+    [num_rows] => 26
+    [type] => 0
+)
+
+result : mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 11
+    [lengths] => 
+    [num_rows] => 0
+    [type] => 0
+)
+
+result : mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 11
+    [lengths] => 
+    [num_rows] => 0
+    [type] => 0
+)
+
+result : mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 11
+    [lengths] => 
+    [num_rows] => 0
+    [type] => 0
+)
+
+result : mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 11
+    [lengths] => 
+    [num_rows] => 0
+    [type] => 0
+)
+
+result : mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 11
+    [lengths] => 
+    [num_rows] => 0
+    [type] => 0
+)
+
+result : mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 11
+    [lengths] => 
+    [num_rows] => 0
+    [type] => 0
+)
+
+result : mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 11
+    [lengths] => 
+    [num_rows] => 0
+    [type] => 0
+)
+
+result : mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 11
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+result : mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 11
+    [lengths] => 
+    [num_rows] => 0
+    [type] => 0
+)
+
+result : mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 11
+    [lengths] => 
+    [num_rows] => 0
+    [type] => 0
+)
+
+result : mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 11
+    [lengths] => 
+    [num_rows] => 0
+    [type] => 0
+)
+
+result : mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 11
+    [lengths] => 
+    [num_rows] => 0
+    [type] => 0
+)
+
+result : mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 11
+    [lengths] => 
+    [num_rows] => 0
+    [type] => 0
+)
+
+result : mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 11
+    [lengths] => 
+    [num_rows] => 0
+    [type] => 0
+)
+
+result : mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 11
+    [lengths] => 
+    [num_rows] => 0
+    [type] => 0
+)
+
+result : mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 11
+    [lengths] => 
+    [num_rows] => 0
+    [type] => 0
+)
+
+result : mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 11
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+result : mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 11
+    [lengths] => 
+    [num_rows] => 0
+    [type] => 0
+)
+
+result : mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 11
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+result : mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 11
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+result : mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 11
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+result : mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 11
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+result : mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 11
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+result : mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 11
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+result : mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 11
+    [lengths] => 
+    [num_rows] => 0
+    [type] => 0
+)
+
+result : mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 11
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+result : mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 11
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+result : mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 11
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+result : mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 11
+    [lengths] => 
+    [num_rows] => 0
+    [type] => 0
+)
+
+result : mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 11
+    [lengths] => 
+    [num_rows] => 0
+    [type] => 0
+)
+
+result : mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 11
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+result : mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 11
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+result : mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 11
+    [lengths] => 
+    [num_rows] => 0
+    [type] => 0
+)
+
+result : mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 11
+    [lengths] => 
+    [num_rows] => 0
+    [type] => 0
+)
+
+result : mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 11
+    [lengths] => 
+    [num_rows] => 0
+    [type] => 0
+)
+
+result : mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 11
+    [lengths] => 
+    [num_rows] => 0
+    [type] => 0
+)
+
+result : mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 11
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+result : mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 11
+    [lengths] => 
+    [num_rows] => 0
+    [type] => 0
+)
+
+result : mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 11
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+result : mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 11
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+result : mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 11
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+result : mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 11
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+result : mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 11
+    [lengths] => 
+    [num_rows] => 0
+    [type] => 0
+)
+
+result : mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 11
+    [lengths] => 
+    [num_rows] => 0
+    [type] => 0
+)
+
+result : mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 11
+    [lengths] => 
+    [num_rows] => 0
+    [type] => 0
+)
+
+result : mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 11
+    [lengths] => 
+    [num_rows] => 0
+    [type] => 0
+)
+
+result : mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 11
+    [lengths] => 
+    [num_rows] => 0
+    [type] => 0
+)
+
+result : mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 11
+    [lengths] => 
+    [num_rows] => 0
+    [type] => 0
 )
 
