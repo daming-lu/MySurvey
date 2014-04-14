@@ -111,17 +111,17 @@ while($row = mysqli_fetch_array($result)) {
 	}
 }
 
-//file_put_contents("../logs/log1","Dates : ".print_r($Dates,true)."\n", FILE_APPEND|LOCK_EX);
+file_put_contents("../logs/log1","Dates : ".print_r($Dates,true)."\n", FILE_APPEND|LOCK_EX);
 //file_put_contents("../logs/log2","dataBlobs : ".print_r($dataBlobs,true)."\n", FILE_APPEND|LOCK_EX);
 //file_put_contents("../logs/log2","boys $boys and girls $girls\n", FILE_APPEND|LOCK_EX);
 
 // Pie for Gender
-//file_put_contents("../d3/data.csv","age,population\nboys,$boys\ngirls,$girls\n");
+file_put_contents("../d3/data.csv","age,population\nboys,$boys\ngirls,$girls\n");
 
 // Arch for Dates
-//file_put_contents("../arch/data.csv","age,population\n");
+file_put_contents("../arch/data.csv","age,population\n");
 foreach ($Dates as $key => $value) {
-	//file_put_contents("../arch/data.csv","$DatesMapping[$key],$value\n", FILE_APPEND|LOCK_EX);
+	file_put_contents("../arch/data.csv","$DatesMapping[$key],$value\n", FILE_APPEND|LOCK_EX);
 }
 // >> 
 
